@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="App PWA para Captación Inmobiliaria. Aplicación Web Progresiva para Gestión de Propiedades por Cástor Taboada" />
+  <meta name="theme-color" content="#111827" />
+  <title>App PWA para Captación Inmobiliaria | Cástor Taboada</title>
+
+  <!-- Favicon y PWA -->
+  <link rel="icon" href="img/icons/icon-192.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="img/icons/icon-192.svg" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <!-- Tipografía Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Estilos del proyecto -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+
+  <!-- ============================== -->
+  <!--     NAVBAR FIJO SUPERIOR       -->
+  <!-- ============================== -->
+  <nav class="navbar fixed top-0 w-full z-50 bg-gray-900/90 backdrop-blur-md border-b border-gray-700" id="navbar">
+    <div class="navbar__inner max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="navbar__logo flex items-center" aria-label="Inicio">
+          <svg width="36" height="36" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="192" height="192" rx="40" fill="#111827"/>
+            <rect x="8" y="8" width="176" height="176" rx="34" fill="none" stroke="#3b82f6" stroke-width="6"/>
+            <text x="96" y="108" font-family="Inter,system-ui,sans-serif" font-size="80" font-weight="800" fill="#f9fafb" text-anchor="middle" dominant-baseline="middle">CT</text>
+          </svg>
+        </a>
+        <a href="index.html" class="inline-flex items-center gap-1 text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors bg-blue-500/10 px-3 py-1.5 rounded-lg border border-blue-500/30">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+          Volver al inicio
+        </a>
+      </div>
+
+      <ul class="navbar__links hidden md:flex items-center gap-6">
+        <li><a href="index.html#sobre-mi" class="navbar__link text-sm font-medium text-gray-300 hover:text-white transition-colors">Sobre mí</a></li>
+        <li><a href="index.html#formacion" class="navbar__link text-sm font-medium text-gray-300 hover:text-white transition-colors">Formación</a></li>
+        <li><a href="index.html#experiencia" class="navbar__link text-sm font-medium text-gray-300 hover:text-white transition-colors">Experiencia</a></li>
+        <li><a href="index.html#proyectos" class="navbar__link text-sm font-medium text-gray-300 hover:text-white transition-colors">Proyectos</a></li>
+        <li><a href="index.html#contacto" class="navbar__link text-sm font-medium text-gray-300 hover:text-white transition-colors">Contacto</a></li>
+      </ul>
+
+      <button class="navbar__toggle md:hidden p-2 text-gray-400 hover:text-white" id="navToggle" aria-label="Abrir menú">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================== -->
+  <!--      DETALLE DEL PROYECTO      -->
+  <!-- ============================== -->
+  <main class="container max-w-4xl mx-auto px-4 sm:px-6 pt-28 pb-16 flex-grow">
+
+    <!-- Enlace Volver -->
+    <div class="mb-6" data-aos="fade-right">
+      <a href="index.html#proyectos" class="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Volver a la sección de proyectos
+      </a>
+    </div>
+
+    <!-- Encabezado Principal -->
+    <header class="mb-8" data-aos="fade-up">
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-2">
+        App PWA para Captación Inmobiliaria
+      </h1>
+      <p class="text-base sm:text-lg text-emerald-400 font-medium">
+        Aplicación Web Progresiva para Gestión de Propiedades
+      </p>
+
+      <!-- Badges / Tags -->
+      <div class="flex flex-wrap gap-2 mt-4">
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-emerald-950/60 text-emerald-300 border border-emerald-500/40">PWA</span>
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-emerald-950/60 text-emerald-300 border border-emerald-500/40">JavaScript</span>
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-emerald-950/60 text-emerald-300 border border-emerald-500/40">Offline-First</span>
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-emerald-950/60 text-emerald-300 border border-emerald-500/40">Service Workers</span>
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-emerald-950/60 text-emerald-300 border border-emerald-500/40">Tailwind CSS</span>
+      </div>
+    </header>
+
+    <!-- Contenedor Imagen Principal -->
+    <div class="rounded-2xl overflow-hidden mb-10 border-2 border-emerald-500/60 bg-gray-800 shadow-2xl shadow-emerald-900/20" data-aos="zoom-in" data-aos-delay="100">
+      <img
+        src="img/pwa_inmobiliaria.jpeg"
+        alt="App PWA para Captación Inmobiliaria"
+        class="w-full h-auto max-h-[440px] object-cover object-center transition-transform duration-500 hover:scale-105"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- Secciones de Contenido Técnico -->
+    <div class="space-y-6" data-aos="fade-up" data-aos-delay="150">
+
+      <!-- 1. Resumen del Proyecto -->
+      <article class="bg-gray-800/90 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-emerald-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h2 class="text-xl font-bold text-white">Resumen del Proyecto</h2>
+        </div>
+        <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+          Aplicación web progresiva optimizada para asesores e inmobiliarias, diseñada específicamente para la captación, registro y gestión de propiedades sobre el terreno. Elimina la dependencia de formularios físicos o cobertura constante, permitiendo a los comerciales levantar fichas completas de inmuebles directamente in situ.
+        </p>
+      </article>
+
+      <!-- 2. Arquitectura Offline-First -->
+      <article class="bg-gray-800/90 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-emerald-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.636 18.364a9 9 0 010-12.728m12.728 0a9 9 0 010 12.728m-9.9-2.829a5 5 0 010-7.07m7.072 0a5 5 0 010 7.07M13 12a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
+          </div>
+          <h2 class="text-xl font-bold text-white">Arquitectura Offline-First</h2>
+        </div>
+        <p class="text-gray-300 leading-relaxed text-sm sm:text-base mb-4">
+          La robustez del sistema se fundamenta en un patrón de trabajo sin conexión a red sin fricciones para el usuario:
+        </p>
+        <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm sm:text-base">
+          <li><strong class="text-white">Service Workers de Alta Eficiencia:</strong> Interceptación inteligente de peticiones con caché de aplicación completa (App Shell Architecture).</li>
+          <li><strong class="text-white">Operatividad en Zonas sin Cobertura:</strong> Levantamiento completo de fichas, fotos de estancias y georreferenciación en sótanos, garajes o zonas rurales sin internet.</li>
+          <li><strong class="text-white">Carga Instantánea:</strong> Latencia reducida a cero en aperturas sucesivas al servirse directamente de la memoria caché local.</li>
+        </ul>
+      </article>
+
+      <!-- 3. Almacenamiento Local y Sincronización -->
+      <article class="bg-gray-800/90 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-emerald-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7C5 4 4 5 4 7zm0 5h16M9 4v16"/></svg>
+          </div>
+          <h2 class="text-xl font-bold text-white">Almacenamiento Local y Sincronización</h2>
+        </div>
+        <p class="text-gray-300 leading-relaxed text-sm sm:text-base mb-4">
+          Persistencia de datos y sincronización transparente:
+        </p>
+        <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm sm:text-base">
+          <li><strong class="text-white">Almacenamiento Local en IndexedDB:</strong> Guardado estructurado de fichas inmobiliarias completas, metadatos y fotografías en base6board/blob en el cliente.</li>
+          <li><strong class="text-white">Sincronización Automática en Segundo Plano:</strong> Detección de conectividad online (`online/offline` listeners) para encolar y subir cambios a la base de datos central sin interacción manual.</li>
+          <li><strong class="text-white">Experiencia de Instalación Nativa:</strong> Totalmente compatible con los criterios PWA para ser instalada en Android, iOS y sistemas de escritorio (Windows, macOS).</li>
+        </ul>
+      </article>
+
+    </div>
+
+    <!-- Botón Inferior de Retorno -->
+    <div class="mt-12 text-center" data-aos="fade-up">
+      <a href="index.html#proyectos" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-all shadow-lg shadow-emerald-600/20">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+        Explorar otros proyectos
+      </a>
+    </div>
+
+  </main>
+
+  <!-- ============================== -->
+  <!--            FOOTER              -->
+  <!-- ============================== -->
+  <footer class="footer border-t border-gray-800 py-8 text-center text-sm text-gray-500">
+    <p>© 2026 Cástor Taboada. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- AOS Init y Service Worker -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, easing: 'ease-out-cubic', duration: 700 });
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch((err) => console.warn('SW err:', err));
+      });
+    }
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.querySelector('.navbar__links');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => navLinks.classList.toggle('navbar__links--open'));
+      document.querySelectorAll('.navbar__link').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('navbar__links--open'));
+      });
+    }
+  </script>
+
+</body>
+</html>

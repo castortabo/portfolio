@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Sistema IoT para Monitorización Térmica Asistencial con ESP32 (TEMP IoT) — TFG por Cástor Taboada Miranda" />
+  <meta name="theme-color" content="#111827" />
+  <title>Sistema IoT para Monitorización Térmica (TEMP IoT) | Cástor Taboada</title>
+
+  <!-- Favicon y PWA -->
+  <link rel="icon" href="img/icons/icon-192.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="img/icons/icon-192.svg" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <!-- Tipografía Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Estilos del proyecto -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+
+  <!-- ============================== -->
+  <!--     NAVBAR FIJO SUPERIOR       -->
+  <!-- ============================== -->
+  <nav class="navbar fixed top-0 w-full z-50 bg-gray-900/90 backdrop-blur-md border-b border-gray-700" id="navbar">
+    <div class="navbar__inner max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="navbar__logo flex items-center" aria-label="Inicio">
+          <svg width="36" height="36" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="192" height="192" rx="40" fill="#111827"/>
+            <rect x="8" y="8" width="176" height="176" rx="34" fill="none" stroke="#3b82f6" stroke-width="6"/>
+            <text x="96" y="108" font-family="Inter,system-ui,sans-serif" font-size="80" font-weight="800" fill="#f9fafb" text-anchor="middle" dominant-baseline="middle">CT</text>
+          </svg>
+        </a>
+        <a href="index.html" class="inline-flex items-center gap-1 text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors bg-blue-500/10 px-3 py-1.5 rounded-lg border border-blue-500/30">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+          Volver al inicio
+        </a>
+      </div>
+
+      <ul class="navbar__links hidden md:flex items-center gap-6">
+        <li><a href="index.html#sobre-mi" class="navbar__link text-sm font-medium text-gray-300 hover:text-white transition-colors">Sobre mí</a></li>
+        <li><a href="index.html#formacion" class="navbar__link text-sm font-medium text-gray-300 hover:text-white transition-colors">Formación</a></li>
+        <li><a href="index.html#experiencia" class="navbar__link text-sm font-medium text-gray-300 hover:text-white transition-colors">Experiencia</a></li>
+        <li><a href="index.html#proyectos" class="navbar__link text-sm font-medium text-gray-300 hover:text-white transition-colors">Proyectos</a></li>
+        <li><a href="index.html#contacto" class="navbar__link text-sm font-medium text-gray-300 hover:text-white transition-colors">Contacto</a></li>
+      </ul>
+
+      <button class="navbar__toggle md:hidden p-2 text-gray-400 hover:text-white" id="navToggle" aria-label="Abrir menú">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================== -->
+  <!--      DETALLE DEL PROYECTO      -->
+  <!-- ============================== -->
+  <main class="container max-w-4xl mx-auto px-4 sm:px-6 pt-28 pb-16 flex-grow">
+
+    <!-- Enlace Volver -->
+    <div class="mb-6" data-aos="fade-right">
+      <a href="index.html#tfg" class="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Volver a la sección de proyectos
+      </a>
+    </div>
+
+    <!-- Encabezado Principal -->
+    <header class="mb-8" data-aos="fade-up">
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-2">
+        Sistema IoT para Monitorización Térmica Asistencial con ESP32 (TEMP IoT)
+      </h1>
+      <p class="text-base sm:text-lg text-purple-400 font-medium">
+        Proyecto de Fin de Grado (TFG) por Cástor Taboada Miranda
+      </p>
+
+      <!-- Badges / Tags -->
+      <div class="flex flex-wrap gap-2 mt-4">
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-purple-950/60 text-purple-300 border border-purple-500/40">ESP32</span>
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-purple-950/60 text-purple-300 border border-purple-500/40">IoT</span>
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-purple-950/60 text-purple-300 border border-purple-500/40">Sensores</span>
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-purple-950/60 text-purple-300 border border-purple-500/40">Wi-Fi</span>
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-purple-950/60 text-purple-300 border border-purple-500/40">Dashboard</span>
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-purple-950/60 text-purple-300 border border-purple-500/40">ThingSpeak</span>
+      </div>
+    </header>
+
+    <!-- Contenedor Imagen Principal -->
+    <div class="rounded-2xl overflow-hidden mb-10 border-2 border-[#a855f7] bg-gray-800 shadow-2xl shadow-purple-900/20" data-aos="zoom-in" data-aos-delay="100">
+      <img
+        src="img/E-MOVECARE2-0.png"
+        alt="Sistema IoT para Monitorización Térmica Asistencial con ESP32 (TEMP IoT)"
+        class="w-full h-auto max-h-[440px] object-cover object-center transition-transform duration-500 hover:scale-105"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- Secciones de Contenido Técnico -->
+    <div class="space-y-6" data-aos="fade-up" data-aos-delay="150">
+
+      <!-- 1. Resumen del Proyecto -->
+      <article class="bg-gray-800/90 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-purple-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="p-2 rounded-lg bg-purple-500/10 text-purple-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h2 class="text-xl font-bold text-white">Resumen del Proyecto</h2>
+        </div>
+        <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+          Sistema IoT de bajo coste diseñado para la monitorización térmica en tiempo real en entornos asistenciales y sanitarios, enfocado en mejorar la calidad de vida de personas dependientes. Proporciona una solución accesible, no invasiva y de despliegue rápido para centros de cuidado, residencias y supervisión domiciliaria.
+        </p>
+      </article>
+
+      <!-- 2. Arquitectura Hardware -->
+      <article class="bg-gray-800/90 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-purple-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="p-2 rounded-lg bg-purple-500/10 text-purple-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+          </div>
+          <h2 class="text-xl font-bold text-white">Arquitectura Hardware</h2>
+        </div>
+        <p class="text-gray-300 leading-relaxed text-sm sm:text-base mb-4">
+          La integración física está optimizada para mantener un consumo energético mínimo y lecturas constantes de alta fidelidad:
+        </p>
+        <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm sm:text-base">
+          <li><strong class="text-white">Microcontrolador ESP32:</strong> Doble núcleo con conectividad Wi-Fi (802.11 b/g/n) y bajo consumo para procesamiento embebido.</li>
+          <li><strong class="text-white">Sensor Digital DS18B20:</strong> Medición térmica de alta precisión con bus 1-Wire, calibración de fábrica y tolerancia mínima.</li>
+          <li><strong class="text-white">Módulo de Alimentación Autónomo:</strong> Regulación de voltaje protegida para garantizar operatividad continua frente a cortes eléctricos o uso móvil.</li>
+        </ul>
+      </article>
+
+      <!-- 3. Infraestructura Software y Cloud -->
+      <article class="bg-gray-800/90 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-purple-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="p-2 rounded-lg bg-purple-500/10 text-purple-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+          </div>
+          <h2 class="text-xl font-bold text-white">Infraestructura Software y Cloud</h2>
+        </div>
+        <p class="text-gray-300 leading-relaxed text-sm sm:text-base mb-4">
+          Ecosistema digital completo para la ingesta, análisis y alerta en tiempo real:
+        </p>
+        <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm sm:text-base">
+          <li><strong class="text-white">Registro en Tiempo Real:</strong> Envío de telemetría continua de temperatura vía HTTP REST/MQTT.</li>
+          <li><strong class="text-white">Integración Cloud con ThingSpeak:</strong> Canal IoT en la nube para almacenamiento de series temporales, visualización gráfica y análisis analítico.</li>
+          <li><strong class="text-white">Dashboard Multiplataforma:</strong> Panel de control accesible desde navegadores web en ordenadores, tablets y smartphones.</li>
+          <li><strong class="text-white">Sistema de Alertas Automáticas:</strong> Notificación inmediata al personal o familiares en caso de superación de umbrales críticos de temperatura.</li>
+        </ul>
+      </article>
+
+    </div>
+
+    <!-- Botón Inferior de Retorno -->
+    <div class="mt-12 text-center" data-aos="fade-up">
+      <a href="index.html#proyectos" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold transition-all shadow-lg shadow-purple-600/20">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+        Explorar otros proyectos
+      </a>
+    </div>
+
+  </main>
+
+  <!-- ============================== -->
+  <!--            FOOTER              -->
+  <!-- ============================== -->
+  <footer class="footer border-t border-gray-800 py-8 text-center text-sm text-gray-500">
+    <p>© 2026 Cástor Taboada. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- AOS Init y Service Worker -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, easing: 'ease-out-cubic', duration: 700 });
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch((err) => console.warn('SW err:', err));
+      });
+    }
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.querySelector('.navbar__links');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => navLinks.classList.toggle('navbar__links--open'));
+      document.querySelectorAll('.navbar__link').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('navbar__links--open'));
+      });
+    }
+  </script>
+
+</body>
+</html>

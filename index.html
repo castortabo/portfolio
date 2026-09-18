@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Portfolio profesional de Cástor Taboada — Técnico SMR, Cloud e IoT." />
+  <meta name="theme-color" content="#111827" />
+  <title>Cástor Taboada | Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/icons/icon-192.svg" type="image/svg+xml" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="img/icons/icon-192.svg" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS - Animate On Scroll -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================== -->
+  <!--            NAVBAR              -->
+  <!-- ============================== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Inicio">
+        <svg width="36" height="36" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="192" height="192" rx="40" fill="#111827"/>
+          <rect x="8" y="8" width="176" height="176" rx="34" fill="none" stroke="#3b82f6" stroke-width="6"/>
+          <text x="96" y="108" font-family="Inter,system-ui,sans-serif" font-size="80" font-weight="800" fill="#f9fafb" text-anchor="middle" dominant-baseline="middle">CT</text>
+        </svg>
+      </a>
+      <ul class="navbar__links">
+        <li><a href="#sobre-mi" class="navbar__link">Sobre mí</a></li>
+        <li><a href="#formacion" class="navbar__link">Formación</a></li>
+        <li><a href="#proyectos" class="navbar__link">Proyectos</a></li>
+        <li><a href="#contacto" class="navbar__link">Contacto</a></li>
+      </ul>
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================== -->
+  <!--         HEADER / HERO          -->
+  <!-- ============================== -->
+  <header class="hero" data-aos="fade-down" data-aos-duration="800">
+    <img
+      src="img/perfil.jpg"
+      alt="Foto de perfil de Cástor Taboada"
+      class="hero__avatar"
+    />
+    <h1 class="hero__title">Cástor Taboada</h1>
+    <p class="hero__subtitle">Técnico SMR | Cloud &amp; IoT</p>
+  </header>
+
+  <main class="container">
+
+    <!-- ============================== -->
+    <!--          SOBRE MÍ              -->
+    <!-- ============================== -->
+    <section class="section" id="sobre-mi" data-aos="fade-up" data-aos-duration="700">
+      <h2 class="section__title">Sobre mí</h2>
+      <div class="about-text">
+        <p>
+          Técnico en Sistemas Microinformáticos y Redes con una fuerte orientación hacia la
+          administración de sistemas, entornos Linux, contenedores Docker y tecnologías Cloud.
+          Apasionado por la automatización, la monitorización de infraestructuras y el Internet
+          de las Cosas (IoT). Busco seguir creciendo profesionalmente en entornos que combinen
+          innovación tecnológica y resolución de problemas reales.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================== -->
+    <!--          FORMACIÓN             -->
+    <!-- ============================== -->
+    <section class="section" id="formacion" data-aos="fade-up" data-aos-duration="700">
+      <h2 class="section__title">Formación</h2>
+      <div class="grid-3">
+
+        <!-- EFA Oretana -->
+        <a href="https://efaoretana.com/" target="_blank" rel="noopener noreferrer" class="card-cv card-cv--link" data-aos="fade-up" data-aos-delay="100">
+          <svg class="card-cv__external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <h3 class="card-cv__title">Grado Medio en SMR</h3>
+          <p class="card-cv__meta">EFA Oretana · 2026</p>
+          <p class="card-cv__description">
+            Ciclo Formativo de Grado Medio en Sistemas Microinformáticos y Redes.
+            Formación completa en instalación, configuración y mantenimiento de
+            sistemas informáticos, redes locales y servicios de red.
+          </p>
+          <div class="tags">
+            <span class="tag">Redes</span>
+            <span class="tag">Sistemas</span>
+            <span class="tag">Hardware</span>
+          </div>
+        </a>
+
+        <!-- PUE Academy -->
+        <a href="https://www.pue.es/" target="_blank" rel="noopener noreferrer" class="card-cv card-cv--link" data-aos="fade-up" data-aos-delay="200">
+          <svg class="card-cv__external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <h3 class="card-cv__title">Microsoft Office Specialist: Excel Associate (MO-210)</h3>
+          <p class="card-cv__meta">PUE Academy · 2026</p>
+          <p class="card-cv__description">
+            Certificación oficial de Microsoft que acredita competencias avanzadas
+            en el manejo de hojas de cálculo, fórmulas, gráficos y análisis de datos
+            con Microsoft Excel.
+          </p>
+          <div class="tags">
+            <span class="tag">Excel</span>
+            <span class="tag">Microsoft</span>
+            <span class="tag">Certificación</span>
+          </div>
+        </a>
+
+        <!-- Unitel -->
+        <a href="https://unitel-tc.com/" target="_blank" rel="noopener noreferrer" class="card-cv card-cv--link" data-aos="fade-up" data-aos-delay="300">
+          <svg class="card-cv__external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <h3 class="card-cv__title">Curso de SMR</h3>
+          <p class="card-cv__meta">Unitel · 2024</p>
+          <p class="card-cv__description">
+            Formación complementaria en sistemas microinformáticos y redes,
+            orientada a la práctica profesional y al soporte técnico en entornos
+            reales.
+          </p>
+          <div class="tags">
+            <span class="tag">Soporte</span>
+            <span class="tag">Redes</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ============================== -->
+    <!--    EXPERIENCIA PROFESIONAL     -->
+    <!-- ============================== -->
+    <section class="section" id="experiencia" data-aos="fade-up" data-aos-duration="700">
+      <h2 class="section__title">Experiencia Profesional</h2>
+      <div class="grid-2">
+
+        <!-- Unitel -->
+        <a href="https://unitel-tc.com/" target="_blank" rel="noopener noreferrer" class="card-cv card-cv--link" data-aos="fade-up" data-aos-delay="100">
+          <svg class="card-cv__external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <h3 class="card-cv__title">Unitel</h3>
+          <p class="card-cv__meta">Prácticas FCT</p>
+          <p class="card-cv__description">
+            Soporte técnico a usuarios, instalación y configuración de equipos,
+            diagnóstico de averías y mantenimiento preventivo en entornos
+            profesionales.
+          </p>
+          <div class="tags">
+            <span class="tag">Soporte</span>
+            <span class="tag">FCT</span>
+          </div>
+        </a>
+
+        <!-- Inforcopy -->
+        <a href="https://www.inforcopy.com/" target="_blank" rel="noopener noreferrer" class="card-cv card-cv--link" data-aos="fade-up" data-aos-delay="200">
+          <svg class="card-cv__external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <h3 class="card-cv__title">Inforcopy</h3>
+          <p class="card-cv__meta">Soporte y mantenimiento</p>
+          <p class="card-cv__description">
+            Mantenimiento de equipos informáticos, impresoras y periféricos.
+            Atención a clientes y resolución de incidencias técnicas en entornos
+            de oficina.
+          </p>
+          <div class="tags">
+            <span class="tag">Mantenimiento</span>
+            <span class="tag">Hardware</span>
+          </div>
+        </a>
+
+        <!-- Tragsatec -->
+        <a href="https://www.tragsa.es/" target="_blank" rel="noopener noreferrer" class="card-cv card-cv--link" data-aos="fade-up" data-aos-delay="300">
+          <svg class="card-cv__external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <h3 class="card-cv__title">Tragsatec</h3>
+          <p class="card-cv__meta">Prácticas FCT</p>
+          <p class="card-cv__description">
+            Colaboración en el departamento IT. Soporte en la gestión de
+            infraestructura de red, sistemas Windows Server y servicios internos.
+          </p>
+          <div class="tags">
+            <span class="tag">Infraestructura</span>
+            <span class="tag">FCT</span>
+          </div>
+        </a>
+
+        <!-- Zelenza -->
+        <a href="https://zelenza.com/" target="_blank" rel="noopener noreferrer" class="card-cv card-cv--link" data-aos="fade-up" data-aos-delay="400">
+          <svg class="card-cv__external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <h3 class="card-cv__title">Zelenza</h3>
+          <p class="card-cv__meta">Sistemas y redes</p>
+          <p class="card-cv__description">
+            Gestión y administración de sistemas, redes y comunicaciones.
+            Monitorización de servicios y resolución de incidencias en
+            infraestructuras críticas.
+          </p>
+          <div class="tags">
+            <span class="tag">Sistemas</span>
+            <span class="tag">Redes</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ============================== -->
+    <!--     PROYECTO FIN DE GRADO      -->
+    <!-- ============================== -->
+    <section class="section" id="tfg" data-aos="fade-up" data-aos-duration="700">
+      <h2 class="section__title">Proyecto de Fin de Grado (TFG)</h2>
+      <a href="proyecto-tfg.html" class="tfg-highlight tfg-highlight--link" data-aos="fade-up" data-aos-delay="150">
+        <h3 class="tfg-highlight__title">Sistema IoT para monitorización térmica asistencial con ESP32</h3>
+        <p class="tfg-highlight__description">
+          Proyecto de fin de grado centrado en el diseño y desarrollo de un sistema IoT
+          de bajo coste para la monitorización térmica en entornos asistenciales. Utiliza
+          un microcontrolador ESP32 junto con sensores de temperatura para recopilar datos
+          en tiempo real, transmitirlos vía Wi-Fi y visualizarlos en un dashboard accesible
+          desde cualquier dispositivo.
+        </p>
+        <div class="tags" style="margin-bottom: 1.5rem;">
+          <span class="tag tag--purple">ESP32</span>
+          <span class="tag tag--purple">IoT</span>
+          <span class="tag tag--purple">Sensores</span>
+          <span class="tag tag--purple">Wi-Fi</span>
+          <span class="tag tag--purple">Dashboard</span>
+        </div>
+        <div class="tfg-highlight__image-container">
+          <img src="img/tfg.jpeg" alt="Sistema IoT para monitorización térmica asistencial con ESP32" loading="lazy" />
+        </div>
+      </a>
+    </section>
+
+    <!-- ============================== -->
+    <!--       OTROS PROYECTOS          -->
+    <!-- ============================== -->
+    <section class="section" id="proyectos" data-aos="fade-up" data-aos-duration="700">
+      <h2 class="section__title">Otros Proyectos</h2>
+      <div class="grid-2">
+
+        <!-- Sistema IoT -->
+        <a href="proyecto-emovecare.html" class="card-custom card-custom--link" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-custom__image-container">
+            <img src="img/proyecto_iot.png" alt="Sistema IoT monitorización térmica" loading="lazy" />
+          </div>
+          <h3 class="card-custom__title">Sistema IoT - Monitorización Térmica</h3>
+          <p class="card-custom__description">
+            Telemetría IoT avanzada con ESP32 para monitorización térmica
+            en tiempo real en entornos asistenciales y sanitarios.
+          </p>
+          <div class="tags">
+            <span class="tag tag--purple">IoT</span>
+            <span class="tag tag--purple">ESP32</span>
+            <span class="tag tag--purple">Telemetría</span>
+          </div>
+        </a>
+
+        <!-- App PWA Inmobiliaria -->
+        <a href="proyecto-pwa-inmobiliaria.html" class="card-custom card-custom--link" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-custom__image-container">
+            <img src="img/pwa_inmobiliaria.jpeg" alt="App PWA captación inmobiliaria" loading="lazy" />
+          </div>
+          <h3 class="card-custom__title">App PWA Captación Inmobiliaria</h3>
+          <p class="card-custom__description">
+            Aplicación web progresiva (PWA) para la captación y gestión
+            de propiedades inmobiliarias. Diseñada para funcionar offline
+            y ofrecer una experiencia nativa en cualquier dispositivo.
+          </p>
+          <div class="tags">
+            <span class="tag">PWA</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Inmobiliaria</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ============================== -->
+    <!--          CONTACTO              -->
+    <!-- ============================== -->
+    <section class="section" id="contacto" data-aos="fade-up" data-aos-duration="700">
+      <h2 class="section__title">Contacto</h2>
+      <div class="contact-card">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <input type="hidden" name="access_key" value="d0e770b1-f841-424d-ae08-5b744bf1202e" />
+          <div class="contact-form__group">
+            <label for="name" class="contact-form__label">Nombre completo</label>
+            <input type="text" id="name" name="name" required class="contact-form__input" placeholder="Tu nombre" />
+          </div>
+          <div class="contact-form__group">
+            <label for="email" class="contact-form__label">Correo electrónico</label>
+            <input type="email" id="email" name="email" required class="contact-form__input" placeholder="tu@email.com" />
+          </div>
+          <div class="contact-form__group">
+            <label for="subject" class="contact-form__label">Asunto / Empresa</label>
+            <input type="text" id="subject" name="subject" class="contact-form__input" placeholder="Asunto o nombre de empresa" />
+          </div>
+          <div class="contact-form__group">
+            <label for="message" class="contact-form__label">Mensaje</label>
+            <textarea id="message" name="message" rows="5" required class="contact-form__input contact-form__textarea" placeholder="Escribe tu mensaje..."></textarea>
+          </div>
+          <button type="submit" class="contact-form__btn">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================== -->
+  <!--            FOOTER              -->
+  <!-- ============================== -->
+  <footer class="footer">
+    <p class="footer__text">&copy; 2026 Cástor Taboada. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- AOS Init -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      easing: 'ease-out-cubic',
+      duration: 700,
+    });
+
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((reg) => console.log('SW registered:', reg.scope))
+          .catch((err) => console.warn('SW registration failed:', err));
+      });
+    }
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.querySelector('.navbar__links');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('navbar__links--open');
+    });
+    document.querySelectorAll('.navbar__link').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('navbar__links--open');
+      });
+    });
+  </script>
+
+</body>
+</html>

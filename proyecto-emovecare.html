@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="E-Movecare 2.0 - Silla Asistencial IoT Inteligente. Proyecto de Innovación Colaborativo (EFA Oretana & Andel FP - CaixaBank Dualiza)" />
+  <meta name="theme-color" content="#111827" />
+  <title>E-Movecare 2.0 - Silla Asistencial IoT Inteligente | Cástor Taboada</title>
+
+  <!-- Favicon y PWA -->
+  <link rel="icon" href="img/icons/icon-192.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="img/icons/icon-192.svg" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <!-- Tipografía Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Estilos del proyecto -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+
+  <!-- ============================== -->
+  <!--     NAVBAR FIJO SUPERIOR       -->
+  <!-- ============================== -->
+  <nav class="navbar fixed top-0 w-full z-50 bg-gray-900/90 backdrop-blur-md border-b border-gray-700" id="navbar">
+    <div class="navbar__inner max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="navbar__logo flex items-center" aria-label="Inicio">
+          <svg width="36" height="36" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="192" height="192" rx="40" fill="#111827"/>
+            <rect x="8" y="8" width="176" height="176" rx="34" fill="none" stroke="#3b82f6" stroke-width="6"/>
+            <text x="96" y="108" font-family="Inter,system-ui,sans-serif" font-size="80" font-weight="800" fill="#f9fafb" text-anchor="middle" dominant-baseline="middle">CT</text>
+          </svg>
+        </a>
+        <a href="index.html" class="inline-flex items-center gap-1 text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors bg-blue-500/10 px-3 py-1.5 rounded-lg border border-blue-500/30">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+          Volver al inicio
+        </a>
+      </div>
+
+      <ul class="navbar__links hidden md:flex items-center gap-6">
+        <li><a href="index.html#sobre-mi" class="navbar__link text-sm font-medium text-gray-300 hover:text-white transition-colors">Sobre mí</a></li>
+        <li><a href="index.html#formacion" class="navbar__link text-sm font-medium text-gray-300 hover:text-white transition-colors">Formación</a></li>
+        <li><a href="index.html#experiencia" class="navbar__link text-sm font-medium text-gray-300 hover:text-white transition-colors">Experiencia</a></li>
+        <li><a href="index.html#proyectos" class="navbar__link text-sm font-medium text-gray-300 hover:text-white transition-colors">Proyectos</a></li>
+        <li><a href="index.html#contacto" class="navbar__link text-sm font-medium text-gray-300 hover:text-white transition-colors">Contacto</a></li>
+      </ul>
+
+      <button class="navbar__toggle md:hidden p-2 text-gray-400 hover:text-white" id="navToggle" aria-label="Abrir menú">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================== -->
+  <!--      DETALLE DEL PROYECTO      -->
+  <!-- ============================== -->
+  <main class="container max-w-4xl mx-auto px-4 sm:px-6 pt-28 pb-16 flex-grow">
+
+    <!-- Enlace Volver -->
+    <div class="mb-6" data-aos="fade-right">
+      <a href="index.html#proyectos" class="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Volver a la sección de proyectos
+      </a>
+    </div>
+
+    <!-- Encabezado Principal -->
+    <header class="mb-8" data-aos="fade-up">
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-2">
+        E-Movecare 2.0 - Silla Asistencial IoT Inteligente
+      </h1>
+      <p class="text-base sm:text-lg text-blue-400 font-medium">
+        Proyecto de Innovación Colaborativo (EFA Oretana &amp; Andel FP - CaixaBank Dualiza)
+      </p>
+
+      <!-- Badges / Tags -->
+      <div class="flex flex-wrap gap-2 mt-4">
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-950/60 text-blue-300 border border-blue-500/40">ESP32</span>
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-950/60 text-blue-300 border border-blue-500/40">MAX30102</span>
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-950/60 text-blue-300 border border-blue-500/40">DS18B20</span>
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-950/60 text-blue-300 border border-blue-500/40">GPS NEO-6M</span>
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-950/60 text-blue-300 border border-blue-500/40">Nextion HMI</span>
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-950/60 text-blue-300 border border-blue-500/40">ThingSpeak Cloud</span>
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-950/60 text-blue-300 border border-blue-500/40">3D Printing</span>
+      </div>
+    </header>
+
+    <!-- Contenedor Imagen Principal -->
+    <div class="rounded-2xl overflow-hidden mb-10 border-2 border-blue-500/60 bg-gray-800 shadow-2xl shadow-blue-900/20" data-aos="zoom-in" data-aos-delay="100">
+      <img
+        src="img/proyecto_iot.png"
+        alt="E-Movecare 2.0 - Silla Asistencial IoT Inteligente"
+        class="w-full h-auto max-h-[440px] object-cover object-center transition-transform duration-500 hover:scale-105"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- C) Métricas e Impacto del Proyecto (Cifras Destacadas) -->
+    <section class="mb-10" data-aos="fade-up" data-aos-delay="120">
+      <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-4">Cifras Clave e Impacto</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="bg-gray-800/80 border border-gray-700/80 rounded-xl p-4 text-center hover:border-blue-500/50 transition-colors">
+          <span class="block text-3xl sm:text-4xl font-extrabold text-blue-400">2</span>
+          <span class="text-xs sm:text-sm text-gray-300 mt-1 block">Centros Participantes</span>
+          <span class="text-[11px] text-gray-500">EFA Oretana &amp; Andel FP</span>
+        </div>
+        <div class="bg-gray-800/80 border border-gray-700/80 rounded-xl p-4 text-center hover:border-blue-500/50 transition-colors">
+          <span class="block text-3xl sm:text-4xl font-extrabold text-blue-400">80+</span>
+          <span class="text-xs sm:text-sm text-gray-300 mt-1 block">Alumnos y 8 Docentes</span>
+          <span class="text-[11px] text-gray-500">Trabajo interdisciplinar</span>
+        </div>
+        <div class="bg-gray-800/80 border border-gray-700/80 rounded-xl p-4 text-center hover:border-blue-500/50 transition-colors">
+          <span class="block text-3xl sm:text-4xl font-extrabold text-blue-400">3</span>
+          <span class="text-xs sm:text-sm text-gray-300 mt-1 block">Prototipos Funcionales</span>
+          <span class="text-[11px] text-gray-500">Validados y operativos</span>
+        </div>
+        <div class="bg-gray-800/80 border border-gray-700/80 rounded-xl p-4 text-center hover:border-blue-500/50 transition-colors">
+          <span class="block text-3xl sm:text-4xl font-extrabold text-blue-400">Ágil</span>
+          <span class="text-xs sm:text-sm text-gray-300 mt-1 block">Metodologías</span>
+          <span class="text-[11px] text-gray-500">Scrum, Kanban y Trello</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secciones Técnicas Ampliadas -->
+    <div class="space-y-6" data-aos="fade-up" data-aos-delay="150">
+
+      <!-- Resumen General -->
+      <article class="bg-gray-800/90 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-blue-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="p-2 rounded-lg bg-blue-500/10 text-blue-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h2 class="text-xl font-bold text-white">Resumen del Proyecto</h2>
+        </div>
+        <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+          Evolución del sistema de telemetría IoT diseñado para la integración en sillas de ruedas y dispositivos de movilidad asistida. El proyecto nace de una iniciativa conjunta entre centros de FP con el apoyo de la convocatoria CaixaBank Dualiza, orientada a dotar a personas dependientes de un ecosistema que combina monitorización vital continua, geolocalización de seguridad e interfaces adaptadas.
+        </p>
+      </article>
+
+      <!-- A) Hardware Integrado y Sensores -->
+      <article class="bg-gray-800/90 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-blue-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="p-2 rounded-lg bg-blue-500/10 text-blue-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+          </div>
+          <h2 class="text-xl font-bold text-white">Hardware Integrado y Sensores</h2>
+        </div>
+        <p class="text-gray-300 leading-relaxed text-sm sm:text-base mb-4">
+          La arquitectura física cuenta con componentes seleccionados por su fiabilidad en entornos de electromedicina y movilidad:
+        </p>
+        <ul class="space-y-3 text-sm sm:text-base text-gray-300">
+          <li class="flex items-start gap-2">
+            <span class="text-blue-400 font-bold mt-0.5">•</span>
+            <div><strong class="text-white">ESP32:</strong> Núcleo de procesamiento dual-core de bajo consumo encargado de la captura de señales, cálculo matemático de magnitudes y transmisión Wi-Fi.</div>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-blue-400 font-bold mt-0.5">•</span>
+            <div><strong class="text-white">Sensor MAX30102:</strong> Módulo biomédico de oximetría de pulso y frecuencia cardíaca que permite monitorizar pulsaciones por minuto (BPM) y saturación periférica de oxígeno (SpO2).</div>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-blue-400 font-bold mt-0.5">•</span>
+            <div><strong class="text-white">Sensor Digital DS18B20:</strong> Medición hermética y precisa de la temperatura del paciente en protocolo 1-Wire para detección precoz de hipotermia o estados febriles.</div>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-blue-400 font-bold mt-0.5">•</span>
+            <div><strong class="text-white">Módulo GPS NEO-6M:</strong> Receptor satelital de alta sensibilidad que provee geolocalización precisa (latitud y longitud) en exteriores para asistencia y auxilio.</div>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-blue-400 font-bold mt-0.5">•</span>
+            <div><strong class="text-white">Pantalla Táctil Nextion TFT:</strong> Terminal gráfico serie UART para visualización in situ de métricas biométricas, alarmas y estado general de la batería.</div>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-blue-400 font-bold mt-0.5">•</span>
+            <div><strong class="text-white">Fabricación Digital y 3D Printing:</strong> Carcasa externa ergonómica y anclajes al chasis de la silla modelados en TinkerCAD e impresos en filamento PLA/PETG resistente a impactos.</div>
+          </li>
+        </ul>
+      </article>
+
+      <!-- B) Flujo de Software y Telemetría Cloud -->
+      <article class="bg-gray-800/90 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-blue-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="p-2 rounded-lg bg-blue-500/10 text-blue-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+          </div>
+          <h2 class="text-xl font-bold text-white">Flujo de Software y Telemetría Cloud</h2>
+        </div>
+        <p class="text-gray-300 leading-relaxed text-sm sm:text-base mb-4">
+          Lógica programada en lenguaje C++ sobre el entorno Arduino IDE para garantizar sincronización estable en tiempo real:
+        </p>
+        <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm sm:text-base mb-6">
+          <li>Actualización continua de constantes fisiológicas en bucle no bloqueante con muestreo periódico.</li>
+          <li>Disparo de <strong class="text-yellow-400">alertas visuales automáticas</strong> en la pantalla Nextion si la lectura térmica supera el umbral clínico de <strong>38.0°C</strong> (código de color rojo #F800).</li>
+          <li>Transmisión empaquetada de 4 campos biomédicos y geoespaciales (<strong class="text-white">Ritmo cardíaco, Temperatura, Latitud, Longitud</strong>) a la plataforma ThingSpeak Cloud en intervalos regulados de <strong>15 segundos</strong>.</li>
+        </ul>
+
+        <!-- D) Bloque de Código de Muestra -->
+        <div class="mt-4">
+          <div class="flex items-center justify-between px-4 py-2 bg-gray-950 rounded-t-xl border-t border-x border-gray-700 text-xs text-gray-400">
+            <span class="flex items-center gap-2 font-mono">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-500 inline-block"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-yellow-500 inline-block"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-green-500 inline-block"></span>
+              firmware_emovecare.ino
+            </span>
+            <span class="text-gray-500 font-mono">C++ / Arduino</span>
+          </div>
+          <pre class="bg-gray-950/90 text-gray-200 text-xs sm:text-sm font-mono p-4 rounded-b-xl border border-gray-700 overflow-x-auto leading-relaxed shadow-inner"><code><span class="text-gray-500">// Lectura de constantes y envío a ThingSpeak Cloud</span>
+<span class="text-purple-400">float</span> tempC = sensors.<span class="text-blue-400">getTempCByIndex</span>(<span class="text-amber-300">0</span>);
+tTEMP.<span class="text-blue-400">setText</span>(<span class="text-emerald-400">String</span>(tempC, <span class="text-amber-300">1</span>));
+
+<span class="text-purple-400">if</span> (tempC &gt;= <span class="text-amber-300">38.0</span>) {
+  tALERTA.<span class="text-blue-400">setText</span>(<span class="text-emerald-300">"ALERTA"</span>);
+  tALERTA.<span class="text-blue-400">setTextColor</span>(<span class="text-amber-300">63488</span>); <span class="text-gray-500">// Alerta visual en pantalla Nextion</span>
+}
+
+<span class="text-gray-500">// Actualización de canales ThingSpeak (Intervalo 15s)</span>
+ThingSpeak.<span class="text-blue-400">setField</span>(<span class="text-amber-300">1</span>, heartRate);
+ThingSpeak.<span class="text-blue-400">setField</span>(<span class="text-amber-300">2</span>, tempC);
+ThingSpeak.<span class="text-blue-400">setField</span>(<span class="text-amber-300">3</span>, lat);
+ThingSpeak.<span class="text-blue-400">setField</span>(<span class="text-amber-300">4</span>, lon);
+ThingSpeak.<span class="text-blue-400">writeFields</span>(myChannel);</code></pre>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Botón Inferior de Retorno -->
+    <div class="mt-12 text-center" data-aos="fade-up">
+      <a href="index.html#proyectos" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-all shadow-lg shadow-blue-600/20">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+        Explorar otros proyectos
+      </a>
+    </div>
+
+  </main>
+
+  <!-- ============================== -->
+  <!--            FOOTER              -->
+  <!-- ============================== -->
+  <footer class="footer border-t border-gray-800 py-8 text-center text-sm text-gray-500">
+    <p>© 2026 Cástor Taboada. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- AOS Init y Service Worker -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, easing: 'ease-out-cubic', duration: 700 });
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch((err) => console.warn('SW err:', err));
+      });
+    }
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.querySelector('.navbar__links');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => navLinks.classList.toggle('navbar__links--open'));
+      document.querySelectorAll('.navbar__link').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('navbar__links--open'));
+      });
+    }
+  </script>
+
+</body>
+</html>

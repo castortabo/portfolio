@@ -1,0 +1,13 @@
+# Node / dependencias
+node_modules/
+npm-debug.log*
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs y temporales
+*.log
+.vercel
